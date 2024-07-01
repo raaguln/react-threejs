@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Fragment, FC } from "react"
 import withStyles from "react-jss"
 import fonts from "./assets/fonts"

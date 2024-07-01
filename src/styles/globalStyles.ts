@@ -14,6 +14,7 @@ const globalStyles: Style = {
     },
     h1: {
       fontSize: "calc(44px + 2vmin)",
+      margin: "1rem 0 0 0",
     },
     p: {
       fontFamily: "Inter, sans-serif",

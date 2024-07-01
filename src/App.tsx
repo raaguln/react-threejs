@@ -8,16 +8,19 @@ import routes from "./routes"
 const styles: Style = {
   ...fonts,
   ...globalStyles,
-  app: {
+  header: {
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "flex-start",
     flexDirection: "column",
     width: "100%",
-    minHeight: "100vh",
-    padding: "3rem 2rem",
+    padding: "0 2rem",
     textAlign: "left",
     boxSizing: "border-box",
+  },
+  app: {
+    composes: "$header",
+    minHeight: "100vh",
   },
 }
 
@@ -28,22 +31,31 @@ interface Props {
 const App: FC<Props> = ({ classes }) => {
   const allRoutesExceptHome = Object.values(routes.slice(0, routes.length - 1))
   return (
-    <main className={classes.app}>
-      <nav>
-        {allRoutesExceptHome.map((d, i) => (
-          <Fragment key={i}>
-            {d.name === "Home" ? (
-              <h2>{d.name}</h2>
-            ) : (
-              <Link key={i} to={d.path}>
+    <>
+      <header className={classes.header}>
+        <h1>Frontend Experiments</h1>
+        <p>
+          Playground and proof of concepts for canvas, 2D and 3D in web using
+          React.
+        </p>
+      </header>
+      <main className={classes.app}>
+        <nav>
+          {allRoutesExceptHome.map((d, i) => (
+            <Fragment key={i}>
+              {d.name === "Home" ? (
                 <h2>{d.name}</h2>
-              </Link>
-            )}
-            <p>{d.description}</p>
-          </Fragment>
-        ))}
-      </nav>
-    </main>
+              ) : (
+                <Link key={i} to={d.path}>
+                  <h2>{d.name}</h2>
+                </Link>
+              )}
+              <p>{d.description}</p>
+            </Fragment>
+          ))}
+        </nav>
+      </main>
+    </>
   )
 }
 

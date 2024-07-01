@@ -1,5 +1,5 @@
 import App from "../App"
-import { ScratchIn, ScratchInOut } from "../layouts"
+import { ScratchIn, ScratchInOut, ThreeJSBasics } from "../layouts"
 
 interface Route {
   name: string
@@ -21,6 +21,12 @@ const routes: Route[] = [
       "Slightly different implementation logic than the previous one. Two layers, 1st layer on top that scratches to a transparent scratch. 2nd layer in the background that scratches to an image / text.",
     path: "scratch-in-out",
     page: <ScratchInOut />,
+  },
+  {
+    name: "ThreeJS - Mesh, events and interactions",
+    description: "Create rotating cubes on click.",
+    path: "three-js",
+    page: <ThreeJSBasics />,
   },
   {
     name: "Home",

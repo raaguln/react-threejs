@@ -1,5 +1,10 @@
 import App from "../App"
-import { ScratchIn, ScratchInOut, ThreeJSBasics } from "../layouts"
+import {
+  ScratchIn,
+  ScratchInOut,
+  ThreeJSBasics,
+  ThreeJSModel,
+} from "../layouts"
 
 interface Route {
   name: string
@@ -27,6 +32,13 @@ const routes: Route[] = [
     description: "Create rotating cubes on click.",
     path: "three-js",
     page: <ThreeJSBasics />,
+  },
+  {
+    name: "ThreeJS Load Models",
+    description:
+      "Loading external models into three.js. Click and drag the shoe to rotate it.",
+    path: "poly",
+    page: <ThreeJSModel />,
   },
   {
     name: "Home",

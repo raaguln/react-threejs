@@ -22,6 +22,15 @@ const styles = {
     textAlign: "left",
     boxSizing: "border-box",
   },
+  textContainer: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    pointerEvents: "none",
+  },
 }
 
 const Children = () => {
@@ -49,6 +58,12 @@ const ThreeJSModel = ({ classes }) => {
       <Canvas dpr={window.devicePixelRatio}>
         <Children />
       </Canvas>
+      <div className={classes.textContainer}>
+        <p>
+          Click and drag to spin the shoe to look at different angles. Scroll
+          in/out to zoom in/out.
+        </p>
+      </div>
     </div>
   )
 }

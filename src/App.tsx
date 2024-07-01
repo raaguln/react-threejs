@@ -37,7 +37,11 @@ const App: FC<Props> = ({ classes }) => {
         <h1>Frontend Experiments</h1>
         <p>
           Playground and proof of concepts for canvas, 2D and 3D in web using
-          React.
+          React. Made by{" "}
+          <a href="https://raaguln.vercel.app/" target="_blank">
+            Raagul Nagendran
+          </a>
+          .
         </p>
       </header>
       <main className={classes.app}>

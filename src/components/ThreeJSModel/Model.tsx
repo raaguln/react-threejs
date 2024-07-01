@@ -5,7 +5,7 @@ import { useGLTF } from "@react-three/drei"
 
 let PATH =
   process.env.NODE_ENV === "production"
-    ? "https://github.com/raaguln/react-threejs/raw/main/shoe-draco.glb"
+    ? "https://raaguln.github.io/react-threejs/shoe-draco.glb"
     : "/shoe-draco.glb"
 
 export default function Model({ ...props }) {
